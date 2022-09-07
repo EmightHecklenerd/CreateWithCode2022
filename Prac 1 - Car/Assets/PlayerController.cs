@@ -9,11 +9,11 @@ public class NewBehaviourScript : MonoBehaviour
     {
         
     }
-
+    public float speed = 20;
     // Update is called once per frame
     void Update()
     {
         //Move the vehicle forward 
-        transform.Translate(Vector3.forward * Time.deltaTime * 20S);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
