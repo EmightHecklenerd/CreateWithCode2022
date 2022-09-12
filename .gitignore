@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-Prac 1 Challenge Plane/[Ll]ibrary/
-Prac 1 Challenge Plane/[Tt]emp/
-Prac 1 Challenge Plane/[Oo]bj/
-Prac 1 Challenge Plane/[Bb]uild/
-Prac 1 Challenge Plane/[Bb]uilds/
-Prac 1 Challenge Plane/[Ll]ogs/
-Prac 1 Challenge Plane/[Uu]ser[Ss]ettings/
+Proto 2/[Ll]ibrary/
+Proto 2/[Tt]emp/
+Proto 2/[Oo]bj/
+Proto 2/[Bb]uild/
+Proto 2/[Bb]uilds/
+Proto 2/[Ll]ogs/
+Proto 2/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
