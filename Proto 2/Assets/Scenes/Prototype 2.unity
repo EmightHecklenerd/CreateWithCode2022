@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food_Sandwich_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2263341806441240083, guid: d33d5df1b4d75044cbb9d29964632d9e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7072771348967379292, guid: d33d5df1b4d75044cbb9d29964632d9e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -511,13 +515,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.39279133, y: -0.2106409, z: 0.11045792, w: 0.888338}
-  m_LocalPosition: {x: 0, y: 19.96, z: -10}
+  m_LocalRotation: {x: 0.67023474, y: -0.0031167837, z: -0.022147018, w: 0.7418121}
+  m_LocalPosition: {x: 0.91, y: 31.09, z: 7.07}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 48.107, y: -25.5, z: 2.641}
+  m_LocalEulerAnglesHint: {x: 83.847, y: -18.669, z: -20.213}
 --- !u!1 &813850408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2038504407411258050, guid: d33d5df1b4d75044cbb9d29964632d9e, type: 3}
@@ -727,6 +731,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3624174426047926790, guid: ca729fb4e0ef01f4b972ad574f5b2f3a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 144532886042283631, guid: ca729fb4e0ef01f4b972ad574f5b2f3a, type: 3}
       propertyPath: m_Name
       value: Animal_Fox_02
@@ -737,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 144532886042613101, guid: ca729fb4e0ef01f4b972ad574f5b2f3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.22
       objectReference: {fileID: 0}
     - target: {fileID: 144532886042613101, guid: ca729fb4e0ef01f4b972ad574f5b2f3a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -745,7 +753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 144532886042613101, guid: ca729fb4e0ef01f4b972ad574f5b2f3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.18
+      value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 144532886042613101, guid: ca729fb4e0ef01f4b972ad574f5b2f3a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -851,7 +859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1714826188947172233, guid: edee7bbaf43ac48488854f47535f05d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.35
       objectReference: {fileID: 0}
     - target: {fileID: 1714826188947172233, guid: edee7bbaf43ac48488854f47535f05d9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -859,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1714826188947172233, guid: edee7bbaf43ac48488854f47535f05d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.9
+      value: 21.87
       objectReference: {fileID: 0}
     - target: {fileID: 1714826188947172233, guid: edee7bbaf43ac48488854f47535f05d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -893,6 +901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal_Cow_White
       objectReference: {fileID: 0}
+    - target: {fileID: 2995265452500735890, guid: edee7bbaf43ac48488854f47535f05d9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edee7bbaf43ac48488854f47535f05d9, type: 3}
 --- !u!1001 &1730357414230877986
@@ -920,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730357416255531537, guid: 92f8c7c8e53ee04438de191d95995697, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19
+      value: 25.66
       objectReference: {fileID: 0}
     - target: {fileID: 1730357416255531537, guid: 92f8c7c8e53ee04438de191d95995697, type: 3}
       propertyPath: m_LocalRotation.w
@@ -949,6 +961,10 @@ PrefabInstance:
     - target: {fileID: 1730357416255531537, guid: 92f8c7c8e53ee04438de191d95995697, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466604602141330569, guid: 92f8c7c8e53ee04438de191d95995697, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92f8c7c8e53ee04438de191d95995697, type: 3}
