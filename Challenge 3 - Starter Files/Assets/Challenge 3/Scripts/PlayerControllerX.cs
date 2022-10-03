@@ -22,7 +22,7 @@ public class PlayerControllerX : MonoBehaviour
     void Start()
     {
         Physics.gravity *= gravityModifier;
-        playerAudio = GetComponent<AudioSource>();
+        playerAudio = GameObject.Find("Player").GetComponent<AudioSource>();
 
         // Apply a small upward force at the start of the game
         playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
@@ -35,7 +35,7 @@ public class PlayerControllerX : MonoBehaviour
         // While space is pressed and player is low enough, float up
         if (Input.GetKeyDown(KeyCode.Space) && !gameOver)
         {
-            playerRb.AddForce(Vector3.up * floatForce);
+            playerRb.AddForce(Vector3.up *  floatForce);
         }
     }
 
