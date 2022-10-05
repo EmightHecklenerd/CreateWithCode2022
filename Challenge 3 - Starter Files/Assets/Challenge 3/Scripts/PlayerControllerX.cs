@@ -49,6 +49,7 @@ public class PlayerControllerX : MonoBehaviour
             gameOver = true;
             Debug.Log("Game Over!");
             Destroy(other.gameObject);
+
         } 
 
         // if player collides with money, fireworks
@@ -57,6 +58,7 @@ public class PlayerControllerX : MonoBehaviour
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
+            fireworksParticle.Stop();
 
         }
 
