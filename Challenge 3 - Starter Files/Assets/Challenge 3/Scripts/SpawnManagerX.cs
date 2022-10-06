@@ -29,6 +29,6 @@ public class SpawnManagerX : MonoBehaviour
         {
             Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
         }
-        Debug.Log("items are spawned");
+        
     }
 }

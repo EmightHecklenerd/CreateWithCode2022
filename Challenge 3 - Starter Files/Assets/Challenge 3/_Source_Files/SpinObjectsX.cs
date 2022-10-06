@@ -11,4 +11,5 @@ public class SpinObjectsX : MonoBehaviour
     {
         transform.Rotate(Vector3.up, spinSpeed * Time.deltaTime);
     }
+
 }

@@ -58,7 +58,7 @@ public class PlayerControllerX : MonoBehaviour
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
-            fireworksParticle.Stop();
+
 
         }
 
