@@ -857,7 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   isLowEnough: 1
-  floatForce: 250
+  floatForce: 200
   explosionParticle: {fileID: 307169477}
   fireworksParticle: {fileID: 1464561496}
   moneySound: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
