@@ -5,14 +5,11 @@ using UnityEngine;
 public class RotateCamera : MonoBehaviour
 {
 
-    private Rigidbody playerRb;
 
     public float rotationSpeed;
-    public float speed = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
 
     }
 
