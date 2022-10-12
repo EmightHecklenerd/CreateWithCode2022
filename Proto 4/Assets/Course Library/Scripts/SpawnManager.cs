@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public GameObject powerupPrefab;
     public GameObject enemyPrefab;
 
     public float spawnRange = 9;
     // Start is called before the first frame update
     void Start()
     {
-
+        Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
         Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
     }
 
