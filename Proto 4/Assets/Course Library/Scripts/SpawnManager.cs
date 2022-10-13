@@ -13,13 +13,13 @@ public class SpawnManager : MonoBehaviour
     {
         Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
         Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-        SpawnEnemyWave(1);
+        SpawnEnemyWave(3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyCount = FindObjectsOfType<Enemy>().Length;
+        enemyCount = FindObjectsOfType<EnemyController>().Length;
         if (enemyCount == 0)
         {
             SpawnEnemyWave(1);

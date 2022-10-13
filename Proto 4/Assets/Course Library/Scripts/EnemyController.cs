@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float speed;
 
@@ -19,7 +19,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-
+        if (transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
         enemyRb.AddForce(lookDirection * speed);
     }
 }
