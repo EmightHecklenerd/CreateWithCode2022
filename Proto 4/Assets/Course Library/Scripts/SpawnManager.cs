@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private Vector3 GenerateSpawnPosition()
@@ -28,4 +28,8 @@ public class SpawnManager : MonoBehaviour
         Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
         return randomPos;
     }
+
+
+       
+
 }
