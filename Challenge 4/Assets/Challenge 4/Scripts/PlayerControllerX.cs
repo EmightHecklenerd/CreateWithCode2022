@@ -35,11 +35,12 @@ public class PlayerControllerX : MonoBehaviour
     // If Player collides with powerup, activate powerup
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Powerup"))
+        if (other.CompareTag("Powerup"))
         {
             Destroy(other.gameObject);
             hasPowerup = true;
-            powerupIndicator.SetActive(true);
+            powerupIndicator.gameObject.SetActive(true);
+            StartCoroutine(PowerupCooldown());
         }
     }
 
@@ -48,22 +49,22 @@ public class PlayerControllerX : MonoBehaviour
     {
         yield return new WaitForSeconds(powerUpDuration);
         hasPowerup = false;
-        powerupIndicator.SetActive(false);
+        powerupIndicator.gameObject.SetActive(false);
     }
 
     // If Player collides with enemy
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
-            Vector3 awayFromPlayer =  transform.position - other.gameObject.transform.position; 
-           
-            if (hasPowerup) // if have powerup hit enemy with powerup force
+            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 awayFromPlayer =  (collision.gameObject.transform.position - transform.position);
+
+            if (collision.gameObject.CompareTag("Enemy") && hasPowerUp) // if have powerup hit enemy with powerup force
             {
                 enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
             }
-            else // if no powerup, hit enemy with normal strength 
+            else if (collision.gameObject.CompareTag("Enemy")) // if no powerup, hit enemy with normal strength 
             {
                 enemyRigidbody.AddForce(awayFromPlayer * normalStrength, ForceMode.Impulse);
             }
