@@ -60,7 +60,7 @@ public class PlayerControllerX : MonoBehaviour
             Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer =  (collision.gameObject.transform.position - transform.position);
 
-            if (collision.gameObject.CompareTag("Enemy") && hasPowerUp) // if have powerup hit enemy with powerup force
+            if (collision.gameObject.CompareTag("Enemy") && hasPowerup) // if have powerup hit enemy with powerup force
             {
                 enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
             }
