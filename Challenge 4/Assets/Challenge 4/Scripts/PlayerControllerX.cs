@@ -9,6 +9,7 @@ public class PlayerControllerX : MonoBehaviour
     private float boostedSpeed = 700;
     private GameObject focalPoint;
 
+    public ParticleSystem smokeParticle;
     public bool hasPowerup;
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
@@ -35,6 +36,8 @@ public class PlayerControllerX : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerRb.AddForce(focalPoint.transform.forward * verticalInput * boostedSpeed );
+            smokeParticle.Play();
+            smokeParticle.transform.position = transform.position + new Vector3(0, -1f, 0);
         }
 
 

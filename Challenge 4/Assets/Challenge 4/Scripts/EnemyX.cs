@@ -7,12 +7,14 @@ public class EnemyX : MonoBehaviour
     public float speed;
     private Rigidbody enemyRb;
     private GameObject playerGoal;
-
+    private SpawnManagerX smScript;
     // Start is called before the first frame update
     void Start()
     {
         playerGoal = GameObject.Find("Player Goal");
         enemyRb = GetComponent<Rigidbody>();
+        smScript = GameObject.Find("Spawn Manager").GetComponent<SpawnManagerX>();
+        speed = smScript.enemySpeed;
     }
 
     // Update is called once per frame
