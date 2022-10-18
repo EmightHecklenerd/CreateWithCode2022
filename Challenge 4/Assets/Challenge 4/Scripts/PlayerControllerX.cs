@@ -6,6 +6,7 @@ public class PlayerControllerX : MonoBehaviour
 {
     private Rigidbody playerRb;
     private float speed = 500;
+    private float boostedSpeed = 700;
     private GameObject focalPoint;
 
     public bool hasPowerup;
@@ -13,7 +14,7 @@ public class PlayerControllerX : MonoBehaviour
     public int powerUpDuration = 5;
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
-    private float powerupStrength = 25; // how hard to hit enemy with powerup
+    private float powerupStrength = 35; // how hard to hit enemy with powerup
     
     void Start()
     {
@@ -29,6 +30,13 @@ public class PlayerControllerX : MonoBehaviour
 
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
+
+        // speed boost
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(focalPoint.transform.forward * verticalInput * boostedSpeed );
+        }
+
 
     }
 
