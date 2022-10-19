@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
-    public float rotationSpeed = 100f;
+
     
 
     // Start is called before the first frame update
@@ -17,7 +17,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //overcomlicated movement//
         float translation = Input.GetAxis("Vertical") * speed;
-        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        float translation1 = Input.GetAxis("Horizontal") * speed;
+
+        translation *= Time.deltaTime;
+        translation1 *= Time.deltaTime;
+
+        transform.Translate(0, 0, translation);
+        transform.Translate(translation1, 0, 0);
+
+
+    }
+
+    void OnCollisionEnter(Collision collision)
+    { 
+        //if touch coin, delete coin and say coin hit//
+        if (collision.GameObject.Find("Coin")) ;
+        {
+            Destroy(gameObject);
+            Debug.Log("Coin Hit");
+        }
+
     }
 }
