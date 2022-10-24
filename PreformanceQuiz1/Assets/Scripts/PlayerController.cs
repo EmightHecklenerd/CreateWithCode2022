@@ -30,14 +30,20 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     { 
         //if touch coin, delete coin and say coin hit//
-        if (collision.GameObject.Find("Coin")) ;
+        if (other.gameObject.CompareTag("Coin")) 
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
             Debug.Log("Coin Hit");
         }
-
+        
+        // if touch enemy, delete player//
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Enemy Hit");
+        }
     }
 }
