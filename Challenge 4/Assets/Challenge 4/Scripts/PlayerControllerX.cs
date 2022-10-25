@@ -6,7 +6,7 @@ public class PlayerControllerX : MonoBehaviour
 {
     private Rigidbody playerRb;
     private float speed = 500;
-    private float boostedSpeed = 700;
+    private float boostedSpeed = 750;
     private GameObject focalPoint;
 
     public ParticleSystem smokeParticle;
