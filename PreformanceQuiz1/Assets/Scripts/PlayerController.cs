@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
-
+   
     
 
     // Start is called before the first frame update
@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Coin Hit");
         }
         
-        // if touch enemy, delete player//
+        // if touch enemy, delete player and say enemy hit//
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
             Debug.Log("Enemy Hit");
         }
     }
