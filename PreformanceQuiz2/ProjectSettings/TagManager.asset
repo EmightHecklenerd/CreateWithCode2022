@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Shooter
+  - Floater
+  - Projectile
+  - E_Projectile
   layers:
   - Default
   - TransparentFX
