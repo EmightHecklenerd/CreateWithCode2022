@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject projectile;
 
     public float horizontalInput;
     public float speed = 10f;
@@ -34,10 +33,6 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            GameObject launchedObject = Instantiate(projectile, transform.position, transform.rotation);
-            launchedObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 750f));
-        }
+        
     }
 }
