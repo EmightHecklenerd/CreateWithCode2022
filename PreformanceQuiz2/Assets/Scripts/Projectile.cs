@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public GameObject enemyProjectile;
     public GameObject projectile;
 
     // Start is called before the first frame update
