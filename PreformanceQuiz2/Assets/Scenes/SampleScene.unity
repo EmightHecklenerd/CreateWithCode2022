@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 1358409064}
   - component: {fileID: 1358409059}
   - component: {fileID: 1358409063}
+  - component: {fileID: 1358409065}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -504,6 +505,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 10
+--- !u!114 &1358409065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358409058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2986e42c7637bb34d99c33b86008c2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lottoNumbers: 01000000020000000300000004000000050000000600000007000000080000000900000000000000
+  myNumber: 0
 --- !u!1 &1586841562
 GameObject:
   m_ObjectHideFlags: 0
