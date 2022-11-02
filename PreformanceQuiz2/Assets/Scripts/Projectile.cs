@@ -15,12 +15,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject launchedObject = Instantiate(projectile, transform.position, transform.rotation);
-            launchedObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 950f));
-
-        }
+        
 
         
        
@@ -28,6 +23,16 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "") ;
+        if (collision.gameObject.tag == "Floater")
+        {
+           
+            Destroy(gameObject);
+        }
+
+        else if (collision.gameObject.tag == "Shooter")
+        {
+           
+            Destroy(gameObject);
+        }
     }
 }

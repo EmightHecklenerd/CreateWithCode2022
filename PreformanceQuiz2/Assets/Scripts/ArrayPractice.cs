@@ -10,13 +10,13 @@ public class ArrayPractice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        myNumber = lottoNumbers[Random.Range(0, 10)];
+        Debug.Log("My number is " + myNumber);
     }
 
     // Update is called once per frame
     void Update()
     {
-        myNumber = lottoNumbers[Random.Range(0, 10)];
-        Debug.Log("My number is " + myNumber);
+
     }
 }
