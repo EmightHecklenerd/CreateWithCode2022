@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7687230799437987402}
   - component: {fileID: 7687230799437987405}
   - component: {fileID: 7687230799437987404}
+  - component: {fileID: -3270210946068610622}
+  - component: {fileID: -1266164401458159562}
   m_Layer: 0
   m_Name: Enemy Projectile
   m_TagString: E_Projectile
@@ -95,3 +97,32 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-3270210946068610622
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687230799437987407}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-1266164401458159562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687230799437987407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681aeb77e96eb848968310e3f631b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyprojectile: {fileID: 7687230799437987407}

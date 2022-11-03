@@ -25,13 +25,16 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Floater")
         {
-           
             Destroy(gameObject);
         }
 
-        else if (collision.gameObject.tag == "Shooter")
+        if (collision.gameObject.tag == "Shooter")
+        {         
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "E_Projectile")
         {
-           
             Destroy(gameObject);
         }
     }
