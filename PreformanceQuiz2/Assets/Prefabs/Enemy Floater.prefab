@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8843912723506237492}
   - component: {fileID: 8843912723506237493}
   - component: {fileID: 8843912723506237498}
-  - component: {fileID: 8843912723506237499}
+  - component: {fileID: -3749431120433412951}
+  - component: {fileID: 4723283536389386746}
+  - component: {fileID: 5504508502806792097}
   m_Layer: 0
   m_Name: Enemy Floater
   m_TagString: Floater
@@ -82,7 +84,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8843912723506237499
+--- !u!114 &-3749431120433412951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843912723506237496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a59bbd34f9ef441b36327c41761d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4723283536389386746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843912723506237496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858e28d5df6dee64eb70ac8e7460efc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &5504508502806792097
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,9 +116,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8843912723506237496}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.5088371
+  m_Height: 2.0878634
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: -0.008836865, y: 0.006649835, z: -0.00000011920929}

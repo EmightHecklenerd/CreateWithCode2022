@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7462653010214918818}
   - component: {fileID: 7462653010214918819}
   - component: {fileID: 7462653010214918828}
+  - component: {fileID: 7307830937771471239}
+  - component: {fileID: 6061216112150685582}
   m_Layer: 0
   m_Name: Enemy Shooter
   m_TagString: Shooter
@@ -91,12 +93,38 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7462653010214918829}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.3741179
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.18705893, z: -4.378218e-16}
+--- !u!114 &7307830937771471239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462653010214918829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a59bbd34f9ef441b36327c41761d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6061216112150685582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462653010214918829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db86071f8dd6f4ab4721e08566a29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyProjectile: {fileID: 7687230799437987407, guid: b72ea3167f2c7554584eab107b5a2da4, type: 3}
+  delay: 15
 --- !u!1 &7462653010310041189
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +215,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7462653010310041189}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2

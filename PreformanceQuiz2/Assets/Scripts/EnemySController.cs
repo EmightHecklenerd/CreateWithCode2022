@@ -5,24 +5,24 @@ using UnityEngine;
 public class EnemySController : MonoBehaviour
 {
     private float speed = 10;
-    public GameObject e_projectile;
+    public GameObject enemyProjectile;
     public float delay = 15;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LateUpdateRoutine());
+        StartCoroutine(OnEnableRoutine());
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
-    }
-
     void LateUpdate()
     {
-        GameObject launchedObject = Instantiate(e_projectile, transform.position, transform.rotation);
+        transform.Translate(Vector3.down * speed * Time.deltaTime);
+    }
+
+    void OnEnable()
+    {
+        GameObject launchedObject = Instantiate(enemyProjectile, transform.position, transform.rotation);
         launchedObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 20f));
     }
 
@@ -32,12 +32,17 @@ public class EnemySController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 
-    IEnumerator LateUpdateRoutine()
+    IEnumerator OnEnableRoutine()
     {
         yield return new WaitForSeconds(delay);
-        LateUpdate();
+        OnEnable();
         // Code to execute after the delay
     }
 }

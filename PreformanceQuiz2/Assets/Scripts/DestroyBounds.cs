@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyProjectile : MonoBehaviour
+public class DestroyBounds : MonoBehaviour
 {
-    public GameObject enemyProjectile;
-
-
+    private float topBound = 9.9f;
+    private float lowerBound = -9.9f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +15,15 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (transform.position.z > topBound)
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.position.z < lowerBound)
         {
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag == "Projectile")
-        {
-            Destroy(gameObject);
-        }
+
     }
 }
