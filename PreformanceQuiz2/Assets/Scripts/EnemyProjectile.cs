@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 20f;
 
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.down * speed * Time.deltaTime);
 
     }
 

@@ -6,7 +6,7 @@ public class EnemySController : MonoBehaviour
 {
     private float speed = 10;
     public GameObject enemyProjectile;
-    public float delay = 5;
+    private float delay = 2;
 
     // Start is called before the first frame update
     void Start()
