@@ -6,7 +6,7 @@ public class EnemySController : MonoBehaviour
 {
     private float speed = 10;
     public GameObject enemyProjectile;
-    public float delay = 15;
+    public float delay = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +22,8 @@ public class EnemySController : MonoBehaviour
 
     void OnEnable()
     {
-        GameObject launchedObject = Instantiate(enemyProjectile, transform.position, transform.rotation);
-        launchedObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 20f));
+        Instantiate(enemyProjectile, transform.position, transform.rotation);
+
     }
 
     private void OnCollisionEnter(Collision collision)

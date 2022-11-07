@@ -40,8 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject launchedObject = Instantiate(projectile, transform.position, transform.rotation);
-            launchedObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 950f));
+            Instantiate(projectile, transform.position, transform.rotation);
 
         }
 
