@@ -18,16 +18,5 @@ public class EnemyFController : MonoBehaviour
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Projectile")
-        {
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-    }
+     
 }

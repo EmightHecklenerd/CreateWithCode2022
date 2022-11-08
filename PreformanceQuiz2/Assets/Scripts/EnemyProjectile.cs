@@ -20,16 +20,5 @@ public class EnemyProjectile : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "Projectile")
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 }

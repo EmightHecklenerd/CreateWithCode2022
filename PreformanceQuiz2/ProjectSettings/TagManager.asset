@@ -8,7 +8,6 @@ TagManager:
   - Floater
   - Projectile
   - E_Projectile
-  - FirePoint
   layers:
   - Default
   - TransparentFX

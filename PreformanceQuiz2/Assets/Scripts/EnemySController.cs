@@ -7,6 +7,7 @@ public class EnemySController : MonoBehaviour
     private float speed = 10;
     public GameObject enemyProjectile;
     private float delay = 2;
+    public GameObject shootPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -22,22 +23,11 @@ public class EnemySController : MonoBehaviour
 
     void OnEnable()
     {
-        Instantiate(enemyProjectile, transform.position, transform.rotation);
+        Instantiate(enemyProjectile, shootPoint.transform.position, transform.rotation);
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Projectile")
-        {
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 
     IEnumerator OnEnableRoutine()
     {

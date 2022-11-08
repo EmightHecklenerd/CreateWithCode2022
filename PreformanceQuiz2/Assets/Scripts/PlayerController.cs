@@ -46,21 +46,31 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Floater")
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
 
         if (collision.gameObject.tag == "E_Projectile")
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
 
         if (collision.gameObject.tag == "Shooter")
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Projectile")
+        {
+            Destroy(collision.gameObject);
+
+            
         }
     }
 }

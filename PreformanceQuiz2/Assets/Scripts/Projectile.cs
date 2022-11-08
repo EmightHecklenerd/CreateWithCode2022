@@ -17,25 +17,14 @@ public class Projectile : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        
-       
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Floater")
+        if (collision.gameObject.tag == "Projectile")
         {
-            Destroy(gameObject);
-        }
+            Destroy(collision.gameObject);
 
-        if (collision.gameObject.tag == "Shooter")
-        {         
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "E_Projectile")
-        {
-            Destroy(gameObject);
         }
     }
 }
