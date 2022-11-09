@@ -8,8 +8,8 @@ public class SpawnManager : MonoBehaviour
     private float spawnY = 0.6f;
     private float spawnRangeX = 9.6f;
     private float spawnPosZ = 9.3f;
-    private float startDelay = 1.0f;
-    private float spawnInterval = 1.5f;
+    private float startDelay = 0.5f;
+    private float spawnInterval = 0.5f;
 
 
     // Start is called before the first frame update

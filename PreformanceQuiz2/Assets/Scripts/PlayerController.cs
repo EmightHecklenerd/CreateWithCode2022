@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool gameOver = false;
+    public float cooldownShot = 1f;
     public GameObject projectile;
     public float horizontalInput;
     public float speed = 10f;
@@ -33,24 +35,23 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
+        cooldownShot -= Time.deltaTime;
 
-    }
-
-    void LateUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && cooldownShot <= 0)
         {
-            Invoke("LaunchProjectile", 5.0f);
+            Instantiate(projectile, transform.position, transform.rotation);
+            cooldownShot = 1f;
         }
     }
 
-    void LaunchProjectile()
-    {
-        Instantiate(projectile, transform.position, transform.rotation);
-    }
 
     private void OnTriggerEnter(Collider collision)
     {
+        if (collision.gameObject)  
+        {
+            Time.timeScale = 0;
+        }
+
         if (collision.gameObject.tag == "Floater")
         {
             Destroy(collision.gameObject);

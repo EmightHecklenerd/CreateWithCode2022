@@ -6,7 +6,7 @@ public class EnemySController : MonoBehaviour
 {
     private float speed = 10;
     public GameObject enemyProjectile;
-    private float delay = 2;
+    private float delay = 1.0f;
     public GameObject shootPoint;
 
     // Start is called before the first frame update
@@ -24,7 +24,6 @@ public class EnemySController : MonoBehaviour
     void OnEnable()
     {
         Instantiate(enemyProjectile, shootPoint.transform.position, transform.rotation);
-
     }
 
     
