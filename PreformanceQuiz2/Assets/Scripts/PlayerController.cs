@@ -40,10 +40,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectile, transform.position, transform.rotation);
-
+            Invoke("LaunchProjectile", 5.0f);
         }
+    }
 
+    void LaunchProjectile()
+    {
+        Instantiate(projectile, transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -54,23 +57,18 @@ public class PlayerController : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.tag == "E_Projectile")
+       else if (collision.gameObject.tag == "E_Projectile")
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.tag == "Shooter")
+       else if (collision.gameObject.tag == "Shooter")
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.tag == "Projectile")
-        {
-            Destroy(collision.gameObject);
-
-            
-        }
+       
     }
 }

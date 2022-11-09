@@ -21,10 +21,22 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Projectile")
+        if (collision.gameObject.tag == "Floater")
         {
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
 
+       else if (collision.gameObject.tag == "E_Projectile")
+       {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+       }
+
+        else if (collision.gameObject.tag == "Shooter")
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
