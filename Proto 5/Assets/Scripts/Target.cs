@@ -10,15 +10,15 @@ public class Target : MonoBehaviour
     private float maxTorque = 10;
     private float xRange = 4;
     private float ySpawnPos = -6;
-    private RigidBody targetRb;
+    private Rigidbody targetRb;
 
     // Start is called before the first frame update
     void Start()
     {
-        targetRb = GetComponent<RigidBody>();
+        targetRb = GetComponent<Rigidbody>();
 
         targetRb.AddForce(Vector3.up * RandomForce(), ForceMode.Impulse);
-        targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse)));
+        targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
 
         transform.position = RandomSpawnPos();
     }
@@ -31,7 +31,7 @@ public class Target : MonoBehaviour
 
     Vector3 RandomForce()
     {
-        return Vector3.up * RandomRange(minSpeed, maxSpeed);
+        return Vector3.up * Random.Range(minSpeed, maxSpeed);
     }
 
     float RandomTorque()
