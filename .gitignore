@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-PreformanceQuiz2/[Ll]ibrary/
-PreformanceQuiz2/[Tt]emp/
-PreformanceQuiz2/[Oo]bj/
-PreformanceQuiz2/[Bb]uild/
-PreformanceQuiz2/[Bb]uilds/
-PreformanceQuiz2/[Ll]ogs/
-PreformanceQuiz2/[Uu]ser[Ss]ettings/
+Proto 5/[Ll]ibrary/
+Proto 5/[Tt]emp/
+Proto 5/[Oo]bj/
+Proto 5/[Bb]uild/
+Proto 5/[Bb]uilds/
+Proto 5/[Ll]ogs/
+Proto 5/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
