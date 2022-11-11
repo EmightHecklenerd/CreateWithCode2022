@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
+    private int score;
+    public TextMeshProUGI scoreText;
     public List<GameObject> targets;
     //public GameObject[] targets2;//
     private float spawnRate = 1.0f;
@@ -13,6 +15,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnTarget());
+        score = 0;
+        scoreText.text = "Score: " + score;
     }
 
     IEnumerator SpawnTarget()
