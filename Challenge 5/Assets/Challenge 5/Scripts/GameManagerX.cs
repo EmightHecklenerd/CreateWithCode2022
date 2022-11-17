@@ -8,15 +8,20 @@ using UnityEngine.UI;
 public class GameManagerX : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timeText;
     public TextMeshProUGUI gameOverText;
     public GameObject titleScreen;
     public Button restartButton; 
 
     public List<GameObject> targetPrefabs;
 
+    private int time;
     private int score;
     private float spawnRate = 1.5f;
     public bool isGameActive;
+
+    public float TimeLeft;
+    public bool TimerOn = false;
 
     private float spaceBetweenSquares = 2.5f; 
     private float minValueX = -3.75f; //  x value of the center of the left-most square
@@ -30,7 +35,34 @@ public class GameManagerX : MonoBehaviour
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(0);
+        time = 60;
+        updateTimer(60);
         titleScreen.SetActive(false);
+    }
+
+    public void Update()
+    {
+        if (TimerOn)
+        {
+            if (TimeLeft > 0)
+            {
+                TimeLeft -= Time.deltaTime;
+            }
+
+            else
+            {
+                Debug.Log("Time is up bro");
+                TimeLeft = 0;
+                TimerOn = false;
+            }
+        }
+    }
+
+    void updateTimer(float currentTime)
+    {
+        currentTime += 1;
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+        timeText.text = "Time: " + time;
     }
 
     // While game is active spawn a random target
@@ -73,11 +105,12 @@ public class GameManagerX : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+
     // Stop game, bring up game over text and restart button
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(true);
         isGameActive = false;
     }
 
