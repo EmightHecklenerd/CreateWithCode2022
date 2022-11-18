@@ -47,6 +47,7 @@ public class GameManagerX : MonoBehaviour
             if (TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime;
+                timeText.text = timeText.ToString("F1");
             }
 
             else
