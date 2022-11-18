@@ -15,7 +15,6 @@ public class GameManagerX : MonoBehaviour
 
     public List<GameObject> targetPrefabs;
 
-    private int time;
     private int score;
     private float spawnRate = 1.5f;
     public bool isGameActive;
@@ -32,16 +31,17 @@ public class GameManagerX : MonoBehaviour
     {
         spawnRate /= difficulty;
         isGameActive = true;
+        TimerOn = true;
         StartCoroutine(SpawnTarget());
         score = 0;
-        UpdateScore(0);
-        time = 60;
-        updateTimer(60);
+        UpdateScore(0);        
         titleScreen.SetActive(false);
     }
 
-    public void Update()
+    void Update()
     {
+        updateTimer(0);
+
         if (TimerOn)
         {
             if (TimeLeft > 0)
@@ -51,9 +51,9 @@ public class GameManagerX : MonoBehaviour
 
             else
             {
-                Debug.Log("Time is up bro");
-                TimeLeft = 0;
-                TimerOn = false;
+                TimeLeft = 0f;
+                Debug.Log("Time is up bro"); 
+                TimerOn = false;             
             }
         }
     }
@@ -61,8 +61,8 @@ public class GameManagerX : MonoBehaviour
     void updateTimer(float currentTime)
     {
         currentTime += 1;
-        float seconds = Mathf.FloorToInt(currentTime % 60);
-        timeText.text = "Time: " + time;
+        float seconds = Mathf.FloorToInt(currentTime / 60.0f);
+        timeText.text = "Time: " + TimeLeft;
     }
 
     // While game is active spawn a random target
@@ -112,6 +112,7 @@ public class GameManagerX : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         isGameActive = false;
+        TimerOn = false;
     }
 
     // Restart game by reloading the scene
