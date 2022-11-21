@@ -26,6 +26,8 @@ public class GameManagerX : MonoBehaviour
     private float minValueX = -3.75f; //  x value of the center of the left-most square
     private float minValueY = -3.75f; //  y value of the center of the bottom-most square
     
+
+ 
     // Start the game, remove title screen, reset score, and adjust spawnRate based on difficulty button clicked
     public void StartGame(int difficulty)
     {
@@ -43,27 +45,23 @@ public class GameManagerX : MonoBehaviour
         updateTimer(0);
 
         if (TimerOn)
-        {
-            if (TimeLeft > 0)
-            {
-                TimeLeft -= Time.deltaTime;
-                timeText.text = timeText.ToString("F1");
-            }
-
-            else
+        {           
+           TimeLeft -= Time.deltaTime;
+                                                                             
+            if (TimeLeft < 0)
             {
                 TimeLeft = 0f;
-                Debug.Log("Time is up bro"); 
-                TimerOn = false;             
+                Debug.Log("Time is up bro");
+                TimerOn = false;
             }
         }
     }
 
     void updateTimer(float currentTime)
     {
-        currentTime += 1;
+        currentTime += 1; 
         float seconds = Mathf.FloorToInt(currentTime / 60.0f);
-        timeText.text = "Time: " + TimeLeft;
+        timeText.text = TimeLeft.ToString("N0"); 
     }
 
     // While game is active spawn a random target
