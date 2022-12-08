@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-Challenge 5/[Ll]ibrary/
-Challenge 5/[Tt]emp/
-Challenge 5/[Oo]bj/
-Challenge 5/[Bb]uild/
-Challenge 5/[Bb]uilds/
-Challenge 5/[Ll]ogs/
-Challenge 5/[Uu]ser[Ss]ettings/
+FakemonReal/[Ll]ibrary/
+FakemonReal/[Tt]emp/
+FakemonReal/[Oo]bj/
+FakemonReal/[Bb]uild/
+FakemonReal/[Bb]uilds/
+FakemonReal/[Ll]ogs/
+FakemonReal/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
