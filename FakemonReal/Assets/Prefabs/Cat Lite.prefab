@@ -1169,9 +1169,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 29287403721719112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef57e158256da649ae75f6444c104c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 271bef94544c61840961a409a87751a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitName: Funny Cat
+  unitLevel: 32
+  damage: 0
+  currentHP: 49
 --- !u!1 &29287403721719114
 GameObject:
   m_ObjectHideFlags: 0
