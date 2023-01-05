@@ -11,7 +11,7 @@ public class BattleHud : MonoBehaviour
     public Text HPText;
     public Slider HealthBar; 
 
-    public void SetHUD()
+    public void SetHUD(Unit unit)
     {
 
     }
