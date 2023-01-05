@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BattleHud : MonoBehaviour
 {
-
+    
     public Text NameText;
     public Text levelText;
     public Text HPText;

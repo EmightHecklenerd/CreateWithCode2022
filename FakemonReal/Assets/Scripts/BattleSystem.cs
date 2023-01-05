@@ -24,4 +24,15 @@ public class BattleSystem : MonoBehaviour
         Instantiate(playerPrefab);
         Instantiate(enemyPrefab);
     }
+
+
+
+
+
+    void OnRunButton()
+    {
+        if (state != BattleState.PlayerTurn)
+            return; 
+    }
+
 }
