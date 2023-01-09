@@ -1,23 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BattleHud : MonoBehaviour
 {
-    
-    public Text NameText;
-    public Text levelText;
-    public Text HPText;
-    public Slider HealthBar; 
+    public GameObject health;
+    public float hpText;
 
-    public void SetHUD(Unit unit)
+    private void Start()
     {
 
     }
 
+    public void SetHP(float hpNormalized)
+    {
+        health.transform.localScale = new Vector3(hpNormalized, 1.0f);
 
-
-
+    }
 
 }

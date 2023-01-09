@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleSystem : MonoBehaviour
+public class BattleUnit : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        SetUpBattle();
+        
     }
 
-    
-    public void SetUpBattle()
+    // Update is called once per frame
+    void Update()
     {
         
     }
