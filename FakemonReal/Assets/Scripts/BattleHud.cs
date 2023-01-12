@@ -9,13 +9,9 @@ public class BattleHud : MonoBehaviour
 
     private void Start()
     {
-
+        health.transform.localScale = new Vector3(0.5f, 1.0f);
     }
 
-    public void SetHP(float hpNormalized)
-    {
-        health.transform.localScale = new Vector3(hpNormalized, 1.0f);
-
-    }
-
+   
+  
 }

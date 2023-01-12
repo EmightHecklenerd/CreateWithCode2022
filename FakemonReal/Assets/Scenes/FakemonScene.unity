@@ -132,6 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 17565472}
+  - component: {fileID: 17565471}
+  - component: {fileID: 17565473}
   m_Layer: 0
   m_Name: Battle System
   m_TagString: Untagged
@@ -139,6 +141,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &17565471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17565470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40a53b4ee6e6584bac214b4a5e7400f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 952685976}
+  hpText: 41.77
 --- !u!4 &17565472
 Transform:
   m_ObjectHideFlags: 0
@@ -153,6 +169,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17565473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17565470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3896a2ee78cb0ef4cad7fcb3ea2bb3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
 --- !u!1 &51358744
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3759245314915829361, guid: 8373fe5f3d75a4a49a32414cad48ef3a, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3759245314923096515, guid: 8373fe5f3d75a4a49a32414cad48ef3a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3469,7 +3502,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428667679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f40a53b4ee6e6584bac214b4a5e7400f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1428667679
 MonoBehaviour:
   m_ObjectHideFlags: 0
